@@ -1,0 +1,22 @@
+{
+    "name": "sandro/awsapii",
+    "autoload": {
+        "psr-4": {
+            "Sandro\\Awsapii\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sandro Ghughunishvili",
+            "email": "84451463+godfather-coder@users.noreply.github.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "models\\" : "./src/models",
+            "services\\": "./src/services",
+            "utils\\": "./src/utils"
+        }
+    }
+}
