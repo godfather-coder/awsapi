@@ -46,6 +46,7 @@ class ProductService {
         $skus = implode("','", $skus);
         $skus = str_replace(',',"','",$skus);
         $skus = str_replace('awsapiisrc',"",$skus);
+        $skus = str_replace('src',"",$skus);
         echo "DELETE FROM products WHERE sku IN ('".$skus."')";
         $stmt = $this->conn->prepare("DELETE FROM products WHERE sku IN ('".$skus."')");
         $stmt->execute();
