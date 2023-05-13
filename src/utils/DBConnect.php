@@ -3,19 +3,20 @@
 namespace utils;
 
 use PDO;
-
+use Symfony\Component\Dotenv\Dotenv;
 class DBConnect {
+
     private $server;
     private $dbName;
     private $user;
     private $password;
 
-    public function __construct()
+    public function __construct($host,$dbname,$dbusername,$dbpassword)
     {
-        $this->server = "us-cdbr-east-06.cleardb.net";
-        $this->dbName ='heroku_24a64cc2987b36d';
-        $this->user ='b24a522522b6a4';
-        $this->password ='fb97f863';
+        $this->server =$host;
+        $this->dbName =$dbname;
+        $this->user =$dbusername;
+        $this->password =$dbpassword;
     }
 
     public function connect() {

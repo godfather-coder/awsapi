@@ -9,14 +9,16 @@ require "../vendor/autoload.php";
 
 use utils\DBConnect;
 use services\ProductService;
+use Symfony\Component\Dotenv\Dotenv;
 
+$dotenv = new Dotenv();
+$dotenv->load("./.env");
 
-$db = new DBConnect;
+$db = new DBConnect($_ENV['DB_HOST'],$_ENV['DB_NAME'],$_ENV['DB_USERNAME'],$_ENV['DB_PASSWORD']);
 
 $conn = $db->connect();
 
 $service = new ProductService($conn);
-
 
 switch ($_SERVER['REQUEST_METHOD']) {
     case "GET":

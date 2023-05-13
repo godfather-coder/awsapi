@@ -11,7 +11,10 @@
             "email": "84451463+godfather-coder@users.noreply.github.com"
         }
     ],
-    "require": {},
+    "require": {
+        "vlucas/phpdotenv": "^5.5",
+        "symfony/dotenv": "^6.2"
+    },
     "autoload": {
         "psr-4": {
             "models\\" : "./src/models",
